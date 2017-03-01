@@ -8,4 +8,42 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!--listView-->
+    <style name="listviewstyle">
+        <item name="android:cacheColorHint">@null</item>
+        <item name="android:divider">@color/line_color_gray</item>
+        <item name="android:dividerHeight">1px</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+    </style>
+
+    <style name="Base"></style>
+
+    <style name="Base.Layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Line" parent="@android:style/Widget">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.7dp</item>
+        <item name="android:background">#55efefef</item>
+    </style>
+
+    <style name="Line.Gray.D" parent="Line">
+        <item name="android:background">#DDDDDD</item>
+    </style>
+
+    <style name="Base.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">text</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:lines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:textColorHint">#B7B7B9</item>
+    </style>
 </resources>

@@ -2,6 +2,7 @@ package com.example.jiawei.wyvideodemo;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.SurfaceView;
@@ -44,6 +45,7 @@ public class LoginActivity extends BaseActivity implements AVEngine.AVEngineList
     private AcceptDialog dialog;
     private AVChatVideoRender remoteVideoView;
     private AVChatData remoteChatData;
+    private Button btnChat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +73,14 @@ public class LoginActivity extends BaseActivity implements AVEngine.AVEngineList
         smallFl = findView(R.id.smallFL);
         layoutVideo = findView(R.id.layout_video);
         layoutLogin = findView(R.id.layout_login);
+        btnChat = (Button) findViewById(R.id.chat);
+        btnChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(LoginActivity.this,MessageChatActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initListener() {
